@@ -28,3 +28,4 @@ node_modules/
 .eslintcache
 package-lock.json
 package.json
+.DS_Store
