@@ -26,3 +26,5 @@ hs_err_pid*
 node_modules/
 
 .eslintcache
+package-lock.json
+package.json
