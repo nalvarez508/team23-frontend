@@ -1,4 +1,4 @@
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap-table'
 import React from 'react';
 
 const inventoryList = () => {
@@ -38,4 +38,4 @@ const inventoryList = () => {
     </Table>
 }
 
-export defualt inventoryList;
+export default inventoryList;
