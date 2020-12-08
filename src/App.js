@@ -1,6 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+ 
+import AddItem from './AddItem/add';
+import InventoryList from './InventoryList/inventoryList';
 
+class App extends Component {
+  render() {
+    return (      
+      <BrowserRouter>
+       <div>
+         <Navigation />
+           <Switch>
+            <Route path="/" component={AddItem} exact/>
+            <Route path="/about" component={InventoryList}/>
+          </Switch>
+       </div> 
+     </BrowserRouter>
+   );
+  }
+}
+/*
 function App() {
   return (
     <div className="App">
@@ -40,5 +61,5 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
