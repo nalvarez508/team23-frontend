@@ -18,7 +18,6 @@ const subItem = () =>{
                 <p>Min. Usable Quantity</p>
                 <input
                     type="text"/>
-                <button onClick = {Submit}>Submit</button>
         </div>
         );
 }
