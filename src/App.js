@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import InventoryList from './InventoryList/inventoryList';
 import Home from './Home/Home';
 import AddItem from './AddItem/add';
+import SubItem from './SubItem/subItem';
 
 class App extends Component {
   render() {
@@ -16,6 +17,8 @@ class App extends Component {
             <Route path="/" component={Home} exact/>
             <Route path="/AddItem" component={AddItem}/>
             <Route path="/InventoryList" component={InventoryList}/>
+            <Route path="/SubItem" component={SubItem}/>
+            
           </Switch>
        </div> 
      </BrowserRouter>
