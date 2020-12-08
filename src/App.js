@@ -5,11 +5,30 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
  
 //import AddItem from './AddItem/add';
 import InventoryList from './InventoryList/inventoryList';
+import Home from './Home';
 
 class App extends Component {
   render() {
     return (      
-      <div className="App">
+      
+
+      <BrowserRouter>
+       <div>
+         
+           <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/InventoryList" component={InventoryList}/>
+          </Switch>
+       </div> 
+     </BrowserRouter>
+   );
+  }
+}
+
+/*
+function App() {
+  return (
+    <div className="App">
       <header>
         <h1><stim>
           STIM
@@ -21,22 +40,6 @@ class App extends Component {
         </h1>
       </header>
       <div/>
-
-      <BrowserRouter>
-       <div>
-         
-           <Switch>
-            
-            <Route path="/about" component={InventoryList}/>
-          </Switch>
-       </div> 
-     </BrowserRouter>
-   );
-  }
-}
-
-function App() {
-  return (
 
       <body>
         <header>
@@ -60,4 +63,5 @@ function App() {
   );
 }
 
+*/
 export default App;

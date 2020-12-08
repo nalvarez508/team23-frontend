@@ -2,6 +2,7 @@ import Table from 'react-bootstrap-table'
 import React from 'react';
 
 const inventoryList = () => {
+    return(
     <Table striped bordered hover>
         <thead>
             <tr>
@@ -36,6 +37,7 @@ const inventoryList = () => {
             </tr>
         </tbody>
     </Table>
+    );
 }
 
 export default inventoryList;
