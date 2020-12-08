@@ -1,3 +1,4 @@
+/*
 header{
     margin: 0;
     background: #222;
@@ -5,32 +6,34 @@ header{
     font-weight: 300;
   }
   
-  body{
-    margin: 0;
-    background: #222;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
+body{
+  background: #222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+h1{
+  background-color: #3498DB;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+  float:left;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 1px;
+  border-color: black;  
+  margin: 0;
+}
+  
+h2{
+  margin: 0;
+  background-color: #3498DB;
+  color: white;
+  float:left;
   }
-  h1{
-    margin: 0;
-    background-color: #3498DB;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    color: white;
-    float:left;
-    border-style: solid;
-    border-width: 1px;
-    border-left-width: 1px;
-    border-color: black;
-    
-  }
-  h2{
-    margin: 0;
-    background-color: #3498DB;
-    color: white;
-    float:left;
-  }
-  aside{
+  
+aside{
     margin: 0;
     background: #222;
     float: left;
@@ -76,3 +79,51 @@ header{
   nav a:hover{
     background-color: #F8F9F9;
   }
+*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 162px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: dimgrey;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+table.header {
+    text-align: center;
+    color: white;
+    width: 40%;
+}
+
+header.top {
+    background-color: royalblue;
+}
+
+td.header {
+    border-left: 5px solid white;
+    text-align: left;
+    padding-left: 22px;
+}
+
+div.menu {
+  background-color: #f1f1f1;
+  height: 43.85vw;
+  width: 162px;
+}
