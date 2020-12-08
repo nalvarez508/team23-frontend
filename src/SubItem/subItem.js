@@ -1,25 +1,26 @@
 import React from 'react';
-//import './add.css';
 
-
-const addItem = () =>{
+const subItem = () =>{
     return (
         <div>
-            <h1>Add Main Item</h1>
+            <h1>Add Sub Item</h1>
                 <form>
                     <p>Name </p>
                     <input
                     type="text"/>
                     </form>
-                <p>Price</p>
+                <p>Price/Amount</p>
                 <input
                     type="text"/>
                 <p>SKU</p>
                 <input
                     type="text"/>
-                <p>SubItems</p>
+                <p>Min. Usable Quantity</p>
+                <input
+                    type="text"/>
+                <button onClick = {Submit}>Submit</button>
         </div>
         );
 }
 
-export default addItem;
+export default subItem;

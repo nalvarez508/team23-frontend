@@ -1,23 +1,24 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
  
-//import AddItem from './AddItem/add';
 import InventoryList from './InventoryList/inventoryList';
-import Home from './Home';
+import Home from './Home/Home';
+import AddItem from './AddItem/add';
+import SubItem from './SubItem/subItem';
 
 class App extends Component {
   render() {
     return (      
-      
-
       <BrowserRouter>
        <div>
-         
            <Switch>
             <Route path="/" component={Home} exact/>
+            <Route path="/AddItem" component={AddItem}/>
             <Route path="/InventoryList" component={InventoryList}/>
+            <Route path="/SubItem" component={SubItem}/>
+            
           </Switch>
        </div> 
      </BrowserRouter>
