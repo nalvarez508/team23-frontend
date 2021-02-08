@@ -26,6 +26,15 @@ const addItem = () =>{
                 <input
                     type="text"/>
                 <p>SubItems</p>
+                <p>
+                    <button
+                    name='button-1'
+                    value='Submit'
+                    >
+                        Submit
+                    </button>
+                </p>
+                
         </div>
         );
 }
