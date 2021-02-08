@@ -18,6 +18,14 @@ const subItem = () =>{
                 <p>Min. Usable Quantity</p>
                 <input
                     type="text"/>
+                <p></p>
+                <button
+                name='button-1'
+                value='Submit'
+                >
+                    Submit
+                </button>
+                
         </div>
         );
 }
