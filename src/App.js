@@ -14,7 +14,7 @@ class App extends Component {
       <BrowserRouter>
        <div>
            <Switch>
-            <Route path="/" component={Home} exact/>
+            <Route path="/Home" component={Home}/>
             <Route path="/AddItem" component={AddItem}/>
             <Route path="/InventoryList" component={InventoryList}/>
             <Route path="/SubItem" component={SubItem}/>
