@@ -5,7 +5,8 @@
     z-index: 1;
     top: 10;
     left: 0;
-    background-color: #111;
+    /*background-color: #111; */
+    background-color: #818181;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -13,7 +14,7 @@
   .menu a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: #818181;
     display: block;
   }

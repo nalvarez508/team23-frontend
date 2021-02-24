@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './subItem.css'
 class SubItem extends Component{
+
+
+
     onSubmit = (evt) => {
         console.log('The User has submitted Sub Item');
     };
@@ -19,7 +22,7 @@ class SubItem extends Component{
                 <body>
                     <div class = "menu">
                         <ul>
-                        <li><a class="active" href= "/">Home</a></li>
+                        <li><a class="active" href= "/Home">Home</a></li>
                         <li><a href="/InventoryList">Inventory</a></li>
                         <li><a href= "#">Alerts</a></li>
                         <li><a href="/AddItem">Add Item</a></li>

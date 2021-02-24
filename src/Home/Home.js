@@ -20,7 +20,7 @@ class Home extends Component{
             
                 <div class = "menu">
                     <ul>
-                    <li><a class="active" href= "/">Home</a></li>
+                    <li><a class="active" href= "/Home">Home</a></li>
                     <li><a href="/InventoryList">Inventory</a></li>
                     <li><a href= "#">Alerts</a></li>
                     <li><a href="/AddItem">Add Item</a></li>
