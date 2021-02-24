@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './subItem.css'
+import SubForm from './SubForm.js'
 class SubItem extends Component{
 
 
@@ -32,7 +33,7 @@ class SubItem extends Component{
                         <li><a href="#">Settings</a></li>
                         </ul>
                     </div>  
-                    <div class = "form">
+                    {/*<div class = "form">
                         <form>
                             <p>Name </p>
                             <input
@@ -54,8 +55,14 @@ class SubItem extends Component{
                         onClick={this.onSubmit}
                         >
                             Submit
-                        </button>
+                    </button>
                 </div>
+                */}
+                    <div class = "boxes">
+                        <SubForm/>
+                    </div>
+
+
                 </body>
                 
                     
