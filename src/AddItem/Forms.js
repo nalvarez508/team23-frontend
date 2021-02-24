@@ -64,7 +64,7 @@ function Forms(){
                         name = "amount"
                         label = "Amount"
                         variant = "filled"
-                        value = {inputField.Amount}
+                        value = {inputField.amount}
                         onChange={event => handleChangeInput(index, event)}
                         />
                         <IconButton

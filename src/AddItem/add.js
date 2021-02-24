@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import './add.css';
 import Forms from './Forms.js';
+import AddForm from './AddForm.js';
 
 
 class AddItem extends Component{
@@ -29,7 +30,7 @@ class AddItem extends Component{
                         <li><a href="#">Settings</a></li>
                         </ul>
                     </div>  
-                    <div class = "form">
+                    {/*<div class = "form">
                         <form>
                             <p>Name </p>
                             <input
@@ -41,7 +42,10 @@ class AddItem extends Component{
                         <p>SKU</p>
                         <input
                             type="text"/>
-                        <p>SubItems</p>
+        */}
+                    <div class = "boxes">
+                        <AddForm/>
+                        <p></p>
                         <Forms/>
                         <p></p>
                         {/*<p>
