@@ -23,6 +23,7 @@ function SubForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        alert('Subitem Added!')
         console.log("InputFields", inputFields);
     };
 

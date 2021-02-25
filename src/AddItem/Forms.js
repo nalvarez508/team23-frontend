@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 import {makeStyles} from '@material-ui/core';
+import {Message} from 'semantic-ui-react';
 
 
 
@@ -29,6 +30,7 @@ function Forms(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        alert('Item Added!')
         console.log("InputFields", inputFields);
     };
 
@@ -47,6 +49,7 @@ function Forms(){
         values.splice(index, 1);
         setInputField(values);
     }
+    
 
     return(
         <Container>
