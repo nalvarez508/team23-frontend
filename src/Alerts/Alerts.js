@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Alerts.css';
 
-class Home extends Component{
+class Alerts extends Component{
     render(){
         return(
             <div>
@@ -9,7 +9,7 @@ class Home extends Component{
                     <table class = "header">
                         <tr>
                             <td class><h1>STIM</h1></td>
-                            <td class = "header"><h1>Your Dashboard</h1></td>
+                            <td class = "header"><h1>Notification Center</h1></td>
                         </tr>
                     </table>
                 </header>
@@ -19,9 +19,9 @@ class Home extends Component{
             <header>
                 <div class = "menu">
                     <ul>
-                    <li><a class="active" href= "/Home">Home</a></li>
+                    <li><a href= "/Home">Home</a></li>
                     <li><a href="/InventoryList">Inventory</a></li>
-                    <li><a href= "/Alerts">Alerts</a></li>
+                    <li><a class="active" href= "/Alerts">Alerts</a></li>
                     <li><a href="/AddItem">Add Item</a></li>
                     <li><a href= "/SubItem">Add SubItem</a></li>
                     <li><a href= "/Ordering">Ordering</a></li>
@@ -39,4 +39,4 @@ class Home extends Component{
     }
 }
 
-export default Home;
+export default Alerts;

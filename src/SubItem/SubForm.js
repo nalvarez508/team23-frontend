@@ -47,7 +47,7 @@ function SubForm(){
                             />
                             <TextField
                             name = "price"
-                            label = "Price"
+                            label = "Price/Amount"
                             variant = "filled"
                             value = {inputField.price}
                             onChange={event => handleChangeInput(index, event)}

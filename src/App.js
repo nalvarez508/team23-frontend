@@ -7,6 +7,10 @@ import InventoryList from './InventoryList/inventoryList';
 import Home from './Home/Home';
 import AddItem from './AddItem/add';
 import SubItem from './SubItem/subItem';
+import Alerts from './Alerts/Alerts';
+import Ordering from './Ordering/Ordering';
+import Metrics from './Metrics/Metrics';
+import Settings from './Settings/Settings';
 
 class App extends Component {
   render() {
@@ -18,6 +22,11 @@ class App extends Component {
             <Route path="/AddItem" component={AddItem}/>
             <Route path="/InventoryList" component={InventoryList}/>
             <Route path="/SubItem" component={SubItem}/>
+            <Route path="/Alerts" component={Alerts}/>
+            <Route path="/Ordering" component={Ordering}/>
+            <Route path="/Metrics" component={Metrics}/>
+            <Route path="/Settings" component={Settings}/>
+
             
           </Switch>
        </div> 

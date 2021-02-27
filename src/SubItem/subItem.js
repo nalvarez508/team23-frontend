@@ -23,14 +23,14 @@ class SubItem extends Component{
                 <body>
                     <div class = "menu">
                         <ul>
-                        <li><a class="active" href= "/Home">Home</a></li>
+                        <li><a href= "/Home">Home</a></li>
                         <li><a href="/InventoryList">Inventory</a></li>
-                        <li><a href= "#">Alerts</a></li>
+                        <li><a href= "/Alerts">Alerts</a></li>
                         <li><a href="/AddItem">Add Item</a></li>
-                        <li><a href= "/SubItem">Add SubItem</a></li>
-                        <li><a href= "#">Ordering</a></li>
-                        <li><a href= "#">Metrics</a></li>
-                        <li><a href="#">Settings</a></li>
+                        <li><a class="active" href= "/SubItem">Add SubItem</a></li>
+                        <li><a href= "/Ordering">Ordering</a></li>
+                        <li><a href= "/Metrics">Metrics</a></li>
+                        <li><a href="/Settings">Settings</a></li>
                         </ul>
                     </div>  
                     {/*<div class = "form">

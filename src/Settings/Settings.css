@@ -1,0 +1,47 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 162px;
+    background-color: #f1f1f1;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a.active {
+    background-color: dimgrey;
+    color: white;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  table.header {
+      text-align: center;
+      color: white;
+      width: 40%;
+  }
+  
+  header.top {
+      background-color: royalblue;
+  }
+  
+  td.header {
+      border-left: 5px solid white;
+      text-align: left;
+      padding-left: 22px;
+  }
+  
+  div.menu {
+    background-color: #f1f1f1;
+    height: 43.85vw;
+    width: 162px;
+  }
+  
