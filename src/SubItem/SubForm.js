@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 function SubForm(){
     const classes = useStyles();
     const [inputFields, setInputField] = useState([
-        {name: '', price: '', sku: '', minUsability: ''},
+        {name: '', sku: '', minUsability: ''},
     ]);
 
     const handleSubmit = (e) => {
@@ -43,13 +43,6 @@ function SubForm(){
                             label="Name"
                             variant = "filled"
                             value = {inputField.name}   
-                            onChange={event => handleChangeInput(index, event)}
-                            />
-                            <TextField
-                            name = "price"
-                            label = "Price/Amount"
-                            variant = "filled"
-                            value = {inputField.price}
                             onChange={event => handleChangeInput(index, event)}
                             />
                             <TextField
