@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/core';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -25,7 +26,9 @@ function SubForm(){
         e.preventDefault();
         alert('Subitem Added!')
         console.log("InputFields", inputFields);
-    };
+        axios.get('http://localhost:8080/testEndPoint').then(res => console.log(res));
+        //fetch('http://localhost:8080/testEndPoint')
+        }
 
     const handleChangeInput = (index, event) => {
         const values = [...inputFields];
