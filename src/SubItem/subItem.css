@@ -26,3 +26,8 @@
 .boxes {
     margin-left: 150px
 }
+
+li a.active {
+  background-color: dimgrey;
+  color: white;
+}
