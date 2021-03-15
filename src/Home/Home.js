@@ -2,6 +2,38 @@ import React, { Component } from 'react';
 import './Home.css';
 
 class Home extends Component{
+
+    constructor(props) {
+        super(props);
+          this.state = {
+            data: []
+          };
+      }
+      
+    componentDidMount() {
+        const url = "http://localhost:8080/testEndpoint"
+        return fetch(url, {
+            method: 'GET',
+            mode: 'cors',
+            headers: new Headers({
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Access-Control-Allow-Origin": "*"
+            }),
+        })
+        .then(response => response.json())
+        .then((responseText) => {
+            console.log(JSON.stringify(responseText));
+            this.setState({
+                data: JSON.stringify(responseText)
+            })
+        })
+        .then(console.log(this.state))
+        .catch(error => {
+            console.log("Oops!")
+        });
+    }
+
     render(){
         return(
             <div>
@@ -31,8 +63,11 @@ class Home extends Component{
                 </div>
             </header>
             <h1 class ="dash">
-
+                <pre>
+                    {'           '}{JSON.stringify(this.state.data, null, 2)}
+                </pre>
             </h1>
+
         </body>
         </div>
         );
