@@ -4,20 +4,9 @@ import './Ordering.css';
 class Ordering extends Component{
     render(){
         return(
-            <div>
-                <header class = "top">
-                    <table class = "header">
-                        <tr>
-                            <td class><h1>STIM</h1></td>
-                            <td class = "header"><h1>Stock Ordering</h1></td>
-                        </tr>
-                    </table>
-                </header>
-            <div/>
-
-        <body>
-            <header>
-                <div class = "menu">
+            <body>
+                <div class = "sidenav">
+                    <h1>STIM</h1>
                     <ul>
                     <li><a href= "/Home">Home</a></li>
                     <li><a href="/InventoryList">Inventory</a></li>
@@ -29,12 +18,14 @@ class Ordering extends Component{
                     <li><a href="/Settings">Settings</a></li>
                     </ul>
                 </div>
-            </header>
-            <h1 class ="dash">
 
-            </h1>
-        </body>
-        </div>
+                <div class = "top">
+                        <div class = "logo">
+                            <h1>Ordering</h1>
+                        </div>
+                </div>
+
+            </body>
         );
     }
 }

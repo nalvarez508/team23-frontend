@@ -9,28 +9,28 @@ import AddForm from './AddForm.js';
 class AddItem extends Component{
     render(){
         return (
-            <div>
-                <header class = "top">
-                    <table class = "header">
-                        <tr>
-                            <td class><h1>STIM</h1></td>
-                            <td class = "header"><h1>Add Items</h1></td>
-                        </tr>
-                    </table>
-                </header>
-                <div class = "menu">
-                        <ul>
-                        <li><a href= "/Home">Home</a></li>
-                        <li><a href="/InventoryList">Inventory</a></li>
-                        <li><a href= "/Alerts">Alerts</a></li>
-                        <li><a class="active" href="/AddItem">Add Item</a></li>
-                        <li><a href= "/SubItem">Add SubItem</a></li>
-                        <li><a href= "/Ordering">Ordering</a></li>
-                        <li><a href= "/Metrics">Metrics</a></li>
-                        <li><a href="/Settings">Settings</a></li>
-                        </ul>
-                    </div>  
-                    {/*<div class = "form">
+            <body>
+                <div class = "sidenav">
+                    <h1>STIM</h1>
+                    <ul>
+                    <li><a href= "/Home">Home</a></li>
+                    <li><a href="/InventoryList">Inventory</a></li>
+                    <li><a href= "/Alerts">Alerts</a></li>
+                    <li><a class="active" href="/AddItem">Add Item</a></li>
+                    <li><a href= "/SubItem">Add SubItem</a></li>
+                    <li><a href= "/Ordering">Ordering</a></li>
+                    <li><a href= "/Metrics">Metrics</a></li>
+                    <li><a href="/Settings">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class = "top">
+                        <div class = "logo">
+                            <h1>Add Product</h1>
+                        </div>
+                </div>
+
+                {/*<div class = "form">
                         <form>
                             <p>Name </p>
                             <input
@@ -42,7 +42,7 @@ class AddItem extends Component{
                         <p>SKU</p>
                         <input
                             type="text"/>
-        */}
+                */}
                     <div class = "boxes">
                         <AddForm/>
                         <p></p>
@@ -58,7 +58,8 @@ class AddItem extends Component{
                         </p>*/}
                     </div>
                     
-            </div>
+
+            </body>
             );
         }
 }

@@ -23,31 +23,48 @@ const InventoryList = () => {
     }
 
     return(
-        <div ClassName="InventoryList">
-            <header class = "top">
-                <table class = "header">
-                    <tr>
-                        <td class><h1>STIM</h1></td>
-                        <td class = "header"><h1>Inventory List</h1></td>
-                    </tr>
-                </table>
-            </header>
 
-            <ReactBootStrap.Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>SKU</th>
-                        <th>Available</th>
-                        <th>Incoming</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {items.map(renderItems)}
-                </tbody>
-            </ReactBootStrap.Table>
-        </div>
+        <body>
+                <div class = "sidenav">
+                    <h1>STIM</h1>
+                    <ul>
+                    <li><a href= "/Home">Home</a></li>
+                    <li><a class="active" href="/InventoryList">Inventory</a></li>
+                    <li><a href= "/Alerts">Alerts</a></li>
+                    <li><a href="/AddItem">Add Item</a></li>
+                    <li><a href= "/SubItem">Add SubItem</a></li>
+                    <li><a href= "/Ordering">Ordering</a></li>
+                    <li><a href= "/Metrics">Metrics</a></li>
+                    <li><a href="/Settings">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class = "top">
+                        <div class = "logo">
+                            <h1>Inventory List</h1>
+                        </div>
+                </div>
+
+                <div ClassName="InventoryList">
+                    <ReactBootStrap.Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>SKU</th>
+                                <th>Available</th>
+                                <th>Incoming</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {items.map(renderItems)}
+                        </tbody>
+                    </ReactBootStrap.Table>
+                </div>
+
+            </body>
+
+        
     );
 }
 
