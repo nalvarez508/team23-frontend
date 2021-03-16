@@ -26,6 +26,10 @@ class Metrics extends Component{
                         </div>
                 </div>
 
+                <div class = "mainContent">
+                    <p><u>Profit Graph</u></p>
+                </div>
+
             </body>
         );
     }
