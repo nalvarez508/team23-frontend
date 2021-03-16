@@ -9,9 +9,11 @@ class Home extends Component{
             data: []
           };
       }
-      
+    
+      //Gets access_token, realm_id, and refresh_token from server.
+      //Need to be passed in as headers with every endpoint call.
     componentDidMount() {
-        const url = "http://localhost:8080/testEndpoint"
+        const url = "http://localhost:8080/getHeaders"
         return fetch(url, {
             method: 'GET',
             mode: 'cors',
