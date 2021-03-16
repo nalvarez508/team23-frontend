@@ -45,7 +45,7 @@ const InventoryList = () => {
                         </div>
                 </div>
 
-                <div ClassName="InventoryList">
+                <div class = "mainContent">
                     <ReactBootStrap.Table striped bordered hover>
                         <thead>
                             <tr>
