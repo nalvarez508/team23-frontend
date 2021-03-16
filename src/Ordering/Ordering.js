@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Orderapi from './Orderapi';
 import './Ordering.css';
+
 
 class Ordering extends Component{
     render(){
@@ -22,7 +24,11 @@ class Ordering extends Component{
                 <div class = "top">
                         <div class = "logo">
                             <h1>Ordering</h1>
+                            
                         </div>
+                </div>
+                <div class = "ordering">
+                    <Orderapi/>
                 </div>
 
             </body>
