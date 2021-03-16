@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
 function SubForm(){
     const classes = useStyles();
     const [inputFields, setInputField] = useState([
-        {name: '', sku: '', minUsability: ''},
+        {name: '', sku: '', minUsability: '', cuurentQuantity: ''},
     ]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('Subitem Added!')
         console.log("InputFields", inputFields);
-        axios.get('http://localhost:8080/testEndPoint').then(res => console.log(res));
+        //axios.get('http://localhost:8080/testEndPoint').then(res => console.log(res));
         //fetch('http://localhost:8080/testEndPoint')
         }
 
@@ -58,6 +58,13 @@ function SubForm(){
                             <TextField
                             name = "minUsability"
                             label = "Minimum Usability"
+                            variant = "filled"
+                            value = {inputField.minUsability}
+                            onChange={event => handleChangeInput(index, event)}
+                            />
+                            <TextField
+                            name = "currentQuantity"
+                            label = "Current Quantity"
                             variant = "filled"
                             value = {inputField.minUsability}
                             onChange={event => handleChangeInput(index, event)}
