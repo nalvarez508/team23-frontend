@@ -57,6 +57,13 @@ function AddForm(){
                             />
                     </div>
                 ))}
+                <Button
+                className={classes.button}
+                variant ="contained"
+                color = "primary" 
+                type="submit" 
+                onClick={handleSubmit}
+                >Send</Button>
             </form>
         </Container>
     );
