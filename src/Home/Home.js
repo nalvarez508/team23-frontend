@@ -27,7 +27,7 @@ class Home extends Component{
         .then((responseText) => {
             console.log(JSON.stringify(responseText));
             this.setState({
-                data: JSON.stringify(responseText)
+                data: responseText//JSON.stringify(responseText)
             })
         })
         .then(console.log(this.state))
@@ -68,6 +68,11 @@ class Home extends Component{
                         {JSON.stringify(this.state.data, null, 2)}
                     </pre>
                     Hello, User!
+                    <pre>
+                        <p>Access Token: {this.state.data.access_token}</p>
+                        <p>Realm ID: {this.state.data.realm_id}</p>
+                        <p>Refresh Token: {this.state.data.refresh_token}</p>
+                    </pre>
                 </h1>
             </div>
         </body>
