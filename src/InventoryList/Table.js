@@ -2,13 +2,13 @@ import React from 'react';
 
 const Table = ({inventory}) => {
     return (
-        <table>
+        <table className="table">
             <thead>
                 <tr>
-                <th>Price</th>
-                <th>Quantity</th>
                 <th>Name</th>
                 <th>SKU</th>
+                <th>Quantity</th>
+                <th>Price</th>
                 <th>Type</th>
                 </tr>
             </thead>
@@ -16,11 +16,10 @@ const Table = ({inventory}) => {
                 { (inventory.length > 0) ? inventory.map((inventory, index) => {
                     return (
                         <tr key = {index}>
-                            <td>{inventory.price}</td>
-                            <td>{inventory.qty}</td>
-                            <td>{inventory.name}</td>
                             <td>{inventory.name}</td>
                             <td>{inventory.sku}</td>
+                            <td>{inventory.qty}</td>
+                            <td>${inventory.price}</td>
                             <td>{inventory.type}</td>
                         </tr>
                     )

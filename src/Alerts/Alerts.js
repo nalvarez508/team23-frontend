@@ -25,6 +25,10 @@ class Alerts extends Component{
                         </div>
                 </div>
 
+                <div class = "mainContent">
+                    <p>You have 0 new alerts regarding your inventory!</p>
+                </div>
+
             </body>
         );
     }
