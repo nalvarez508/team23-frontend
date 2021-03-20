@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from './Table.js';
 import './inventoryList.css';
 
@@ -8,9 +7,10 @@ class InventoryList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            inventory: []
         }
     }
+
 
     componentDidMount() {
         const url = "http://localhost:8080/inventory_list"
@@ -21,8 +21,8 @@ class InventoryList extends Component {
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "Access-Control-Allow-Origin": "*",
-                "access_token": "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..aFPTLf_Cl2WP0a2YIdJDqg.n7qeSewIocYaUX0ttdRTxB6xFvqaR2iGHcIglJUe4CJMDbCBhvuCny5gN1RgGt18eDIGD7mCvJmQ6j_ehuDRkdP-Qg5UdqugH9u4AKdWNLOhgobsmeDamWv2JRrL_zo1wQzLUmo2xoo32z8JSQnd9lpnQUsmc2G1V94cB4Mkl31kaBRCb5cyr6v9KhxtsKIlp1lAi72mcM6FSLq3NwSCCGT98cNFCTdFO4JpZ7VGGBDQLl9BTXlczdQ0dpjcxXyf53Z_T2g_CKSlTEQo3PKl9r6fnDcrQ_UVSiiazsiGDIBZ9c_tCrAxc-BnNAlT_HVPQ8bxBytZNFEnYzJLWr00XzYoiJFUayZlIkbHbqbue9HNgDuadphjRSE1Q9o6WewiZQm0PxgpUf4gB5SBFoFmZtQmcyyvXv7esDwQ6O9Uip3YZiJ31Fe4kzCUAGLt_kN4vLtw8C08Hq8KS25e_GZT_Id3ZA1FCNTVlOHWuDvXpjpNVgIxGenZbhb8ilYI3m3qd9nUbpsJfSBHC9GIf5_xt4_-ZbC9iOUP9Cta-W5OLjnRp1N0r6ZcJC-0XlbftIUJKYaIcFI1y22qbTXOP9VQEmKF2qSTHd6vMoxVlYbD9wpkA09MarXic_GWrm6xdYmeq6shUTtoKA7TqTKz_frtLawejaBQ0np8inGjI6HWPUZpXN6s_Bc8VGS0A95AVaxAYV4x7_EgUlzHoCxUeq7welcwpuG4QLLFAsyAEo2EAs9wZLUlWuZbC9Gd3Odq27Bn.Lj1mNfMJnWImsAVarJGwwA",
-                "realm_id": "4620816365155917290"
+                "access_token": "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..8uvvk6RmuJ0COEM9upnshQ.iuA2BnqYh-LtgsOYPUsyfaLQhe9zsbZ3bqASrOJiCOTATR0-z2T33zfH9Wp8P8NoTjfL1x8zZENeJP4BJrjyDeSIX4PjqbIkxykvAMNqUBdRr8QHfpsXaCYHDYhW76sQCSinuX3im7_9IsKxorv7nZrx-o2z3WS-jalreoAQbYaH_mKyVjeyw6KbpprF-wsjz2JV_98O68Ths0rBP-meJ85I6dGcCtZ-Bk_al17UYZdcUpIC2xK_DRco04W7JAR3JwnsC_W9LHYebJxIOfeq4oiuqSU-tlLEkTgKe09vfWDcEhp7SKEq3bLT0wZHG7EtYQ5csTz9iVJh3xdN_exjUBsnz04LcsaFmkIb347pSCnMiZ8tY4D9UFP_F1ilmHYdqYcT0DZrWh1hEcp5d2WrCC3_ZS9nSOBWA2eheOFO-0WAtKcrQKtNTUjWQbVe7Abnq71fRmzOoNyORdaGmY2CPAEFljlnROlzCJOD6WeszF2OboDdoRXPS2nd6bkSNBbUOmYrEIFE7P7J-VEZbzZh1OTErjeG8aTFbCf9y7rC83LEM28tTqOXPoe6bYCylpw83chdrycGthb5eed_fvMwgsCCVYVQmTzDCjMkyQ8Hk5ZpCt-H5L7AYDgI2o_1cH_NNYJ90TWr0jLbAnCtYr1m6IsxHdBkShgvYWmvI3VTonYEpbW27kcMpsHLfK6mLduvB7g_fSxK1ITqPqIVMWyrle8xlneifUs67BO7p0-mUtJB84-jRRdrMR6B9NMvt8Mm.IVXqEBDYjMntS2nEVZdjBw",
+                "realm_id": "46208163651514239600"
             }),
         })
 
@@ -60,6 +60,9 @@ class InventoryList extends Component {
 
                 <div className="mainContent">
                     <Table inventory={this.state.data} />
+                    <pre>
+                        {JSON.stringify(this.state.data, null, 2)}
+                    </pre>
                 </div>
             </body>
     );
