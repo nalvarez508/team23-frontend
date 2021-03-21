@@ -9,7 +9,6 @@ const Table = ({inventory}) => {
                 <th>SKU</th>
                 <th>Quantity</th>
                 <th>Price</th>
-                <th>Type</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,7 +19,6 @@ const Table = ({inventory}) => {
                             <td>{inventory.sku}</td>
                             <td>{inventory.qty}</td>
                             <td>${inventory.price}</td>
-                            <td>{inventory.type}</td>
                         </tr>
                     )
                 }) : <tr><td colSpan="5">Loading...</td></tr> }
