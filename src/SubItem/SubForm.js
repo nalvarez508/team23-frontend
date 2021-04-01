@@ -55,9 +55,6 @@ function SubForm(){
         var access = splitToken[0];
         var id = splitToken[2];
 
-
-
-
         var sentence = JSON.stringify(inputFields);
         //console.log(sentence);
 
