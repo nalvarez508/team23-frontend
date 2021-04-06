@@ -28,6 +28,9 @@ li a:hover {
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
 .top {
@@ -75,4 +78,9 @@ li a:hover {
   padding-top: 4px;
   border-right: white;
   border-style: none solid none none;
+}
+
+.mainChild {
+  width: 90%;
+  font-size: medium;
 }

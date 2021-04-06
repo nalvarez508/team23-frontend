@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './Metrics.css';
+import Gross from './Gross';
+import Expenses from './Expenses';
+import InventoryLevel from './InventoryLevel';
+import InventoryDropdown from './InventoryDropdown';
+import GetHeaders, {access, id} from './getHeaders';
 
 class Metrics extends Component{
     render(){
@@ -27,7 +32,19 @@ class Metrics extends Component{
                 </div>
 
                 <div class = "mainContent">
-                    <p><u>Profit Graph</u></p>
+                    <div class = "mainChild">
+                        <Gross/>
+                    </div>
+                    <div class = "mainChild">
+                        <Expenses/>
+                    </div>
+                    <div class = "mainChild">
+                        <InventoryDropdown/>
+                        <InventoryLevel/>
+                    </div>
+                    <GetHeaders/>
+                    <p>{access}</p>
+                    <p>{id}</p>
                 </div>
 
             </body>
