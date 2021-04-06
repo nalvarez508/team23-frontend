@@ -27,8 +27,6 @@ function InventoryList () {
             console.log("Oops!")
         });
 
-        console.log(header.realm_id);
-
         var token = header;
         token = token.replace("access_token", '').replace("refresh_token", '').replace("realm_id", '');
         token = token.replace(/[""]/g, '').replace(":", '').replace(":", '').replace(":", '').replace(/[{}]/g, '');
@@ -84,7 +82,6 @@ function InventoryList () {
             <div className="mainContent">
                 <Table inventory={data} />
             </div>
-          
         </body>
     );
 
