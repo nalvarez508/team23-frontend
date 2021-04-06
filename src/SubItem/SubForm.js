@@ -57,7 +57,7 @@ function SubForm(){
 
 
 
-
+        
         var sentence = JSON.stringify(inputFields);
         //console.log(sentence);
 
@@ -95,10 +95,13 @@ function SubForm(){
         //fetch('http://localhost:8080/testEndPoint')
         }
 
+
     const handleChangeInput = (index, event) => {
+        event.preventDefault();
         const values = [...inputFields];
         values[index][event.target.name] = event.target.value;
         setInputField(values);
+       
     }
 
     return(
