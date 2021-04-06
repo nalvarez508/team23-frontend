@@ -79,9 +79,10 @@ function InventoryList () {
                     </div>
             </div>
 
-            <div className="mainContent">
+            <div className="mainTable">
                 <Table inventory={data} />
             </div>
+            <p></p>
         </body>
     );
 
