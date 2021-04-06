@@ -1,53 +1,67 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
+import {List, Header, Rating} from "semantic-ui-react";
+import './Orderapi.css'
+import {BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams} from "react-router-dom";
 
+class Orderapi extends Component{
 
-const Orderapi = () => {
-    const [ingredients, setIngredients] = useState([])
-
- /*   const fetchData = () => {
-        const ingredient = 'http://127.0.0.1:5000/subItem/sugar';
-
-        const getIngredient = axios.get(ingredient)
-        axios.all(getIngredient).then(
-            axios.spread((...allData) => {
-                const allDataIngredient = allData
-
-                console.log(allDataIngredient)
-            })
-        )
+    constructor(props){
+        super(props);
+        this.state = {
+            items: [],
+            isLoaded: false,
+        }
     }
-*/
-    useEffect(() => {
-        /*fetch("http://127.0.0.1:5000/subItem/sugar").then(res =>
-            response.json().then(data=> {
-                setIngredients(data);
+
+    componentDidMount(){
+        fetch('http://127.0.0.1:5000/subItem/sugar')
+            .then(res => res.json())
+            .then(json => {
+                this.setState({
+                    isLoaded: true,
+                    items: json,
+                })
             })
-        )*/
+    }
 
-        axios.get('http://127.0.0.1:5000/subItem/sugar')
-            .then(res => {
-                console.log(res)
-                setIngredients(res.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    })
+    render(){
 
-    console.log(ingredients)
+        var{isLoaded, items} = this.state;
 
-    return(
-        <div className = "Ordering">
-            <ul>
-                {
-                    ingredients
-                }
-            </ul>
-        </div>
-    );
+        if(!isLoaded){
+            return <div>Loading...</div>;
+        }
+        else{
 
+            return(
+                <div className = "Orderapi">
+                    <ul class = "list">
+                        {items.map(item=>( 
+                            <li class = "test" key={item.Amount}>
+                                <Header>Description: {item.description}</Header>
+                                <small>Price Per: {item.Amount}</small>
+                                <br></br>
+                                <small>Rating: {item.Rating}</small>
+                                <br></br>
+                                <small>Reviews: {item.Count}</small>
+                                <br></br>
+                                <small>Price: {item.price}</small>
+                                <br></br>
+                                <small>Total: {item.Total} Oz.</small>
+                                <br></br>
+                                <small>URL: {item.url}</small>
+                            </li>
+                        ))};
+                    </ul>
 
+                </div>
+            );
+        }
+    }
 
 }
 

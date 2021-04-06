@@ -6,7 +6,7 @@ import './Ordering.css';
 class Ordering extends Component{
     render(){
         return(
-            <body>
+            <div id = "Page">
                 <div class = "sidenav">
                     <h1>STIM</h1>
                     <ul>
@@ -27,11 +27,11 @@ class Ordering extends Component{
                             
                         </div>
                 </div>
-                <div class = "ordering">
+                <div className = "ordering">
                     <Orderapi/>
                 </div>
-
-            </body>
+            
+            </div>
         );
     }
 }

@@ -78,5 +78,14 @@ li a:hover {
 }
 
 .ordering {
-  margin-left: 350px
+  display: inline-block;
+  margin-left: 80px;
+  height: fit-content;
+  width: fit-content;
+
+  
+}
+
+.page{
+  background-color: white;
 }
