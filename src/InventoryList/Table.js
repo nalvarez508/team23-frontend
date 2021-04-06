@@ -21,7 +21,7 @@ const Table = ({inventory}) => {
                             <td>${inventory.price}</td>
                         </tr>
                     )
-                }) : <tr><td colSpan="5">Loading...</td></tr> }
+                }) : <tr><td colSpan="4">Loading...</td></tr> }
             </tbody>
         </table>
     );
