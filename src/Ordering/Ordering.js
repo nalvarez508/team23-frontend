@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Orderapi from './Orderapi';
+import {OrderingForm} from "./OrderingForm";
 import './Ordering.css';
+import {Container} from "semantic-ui-react";
 
 
 class Ordering extends Component{
@@ -28,7 +30,10 @@ class Ordering extends Component{
                         </div>
                 </div>
                 <div className = "ordering">
-                    <Orderapi/>
+                    <Container>
+                        <OrderingForm/>
+                        
+                    </Container>
                 </div>
             
             </div>
