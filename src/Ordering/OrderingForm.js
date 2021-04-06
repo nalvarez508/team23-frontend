@@ -25,7 +25,7 @@ export const OrderingForm = () => {
 
     return(
         <div className="ord">
-            <Form classname = {classes.root}>
+            <Form class = "ff">
                 <Form.Field>
                     <TextField
                         name = "Item"
