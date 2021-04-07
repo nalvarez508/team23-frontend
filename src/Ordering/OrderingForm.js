@@ -59,7 +59,6 @@ export const OrderingForm = () => {
                         console.log(response);
                         console.log(items);
                         console.log('response worked!');
-
                             
                     
                     }}>Submit</Button>
@@ -80,7 +79,8 @@ export const OrderingForm = () => {
                             <br></br>
                             <small>Total: {item.Total} Oz.</small>
                             <br></br>
-                            <small>URL: {item.url}</small>
+                            <a href={item.url} target="_blank">Order</a>
+                            
                         </li>
                     ))}
                 </ul>
