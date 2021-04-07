@@ -55,6 +55,10 @@ function SubForm(){
         var access = splitToken[0];
         var id = splitToken[2];
 
+        console.log(access);
+        console.log(id);
+
+
 
 
         
@@ -71,7 +75,7 @@ function SubForm(){
 
 
         const url = "http://localhost:8080/createMainItem?name=" + pieces[0] + "&sku=" + pieces[1] + "&price=" + pieces[2] + "&qty=" + pieces[3];
-        //console.log(url)
+        console.log(url)
         //console.log(JSON.stringify(inputFields));
         //console.log('http://localhost:8080/addSubItem?name=${encodeURIComponent(pieces[0])}&sku={encodedURIComponent(pieces[1]))&qty={encodeURIComponent(pieces[2])}&muq={encodedURIComponent(pieces[3])}')
         fetch(url, {
