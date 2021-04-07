@@ -28,7 +28,6 @@ function SubForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert('Subitem Added!')
         //console.log("InputFields", inputFields);
         fetch("http://localhost:8080/getHeaders", {
             method: 'GET',
@@ -72,7 +71,9 @@ function SubForm(){
         var pieces = total.split(",");
         //console.log(total);
         //console.log(pieces[0]);
-
+        if(access){
+            alert('Subitem Added!');
+        }
 
         const url = "http://localhost:8080/createMainItem?name=" + pieces[0] + "&sku=" + pieces[1] + "&price=" + pieces[2] + "&qty=" + pieces[3];
         console.log(url)
