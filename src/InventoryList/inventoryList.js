@@ -9,52 +9,57 @@ function InventoryList () {
 
     useEffect(() => {
     //useLayoutEffect(() => {
-        fetch("http://localhost:8080/getHeaders", {
-            method: 'GET',
-            mode: 'cors',
-            headers: new Headers({
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                "Access-Control-Allow-Origin": "*"
-            }),
-        })
-        .then(res => res.json())
-        .then((resText) => {
-            console.log(JSON.stringify(resText));
-            setHeader(JSON.stringify(resText));
-        })
-        .catch(error => {
-            console.log("Oops!")
-        });
-
+        const test = false;
+        if (test === false) {
+            fetch("http://localhost:8080/getHeaders", {
+                method: 'GET',
+                mode: 'cors',
+                headers: new Headers({
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Access-Control-Allow-Origin": "*"
+                }),
+            })
+            .then(res => res.json())
+            .then((resText) => {
+                console.log(JSON.stringify(resText));
+                setHeader(JSON.stringify(resText));
+            })
+            .catch(error => {
+                console.log("Oops!")
+            });
+        }
+        
         var token = header;
         token = token.replace("access_token", '').replace("refresh_token", '').replace("realm_id", '');
         token = token.replace(/[""]/g, '').replace(":", '').replace(":", '').replace(":", '').replace(/[{}]/g, '');
         var splitToken = token.split(",");
         var access = splitToken[0];
         var id = splitToken[2];
+        
+        if (test === true) {
+            const url = "http://localhost:8080/inventory_list"
+            fetch(url, {
+                method: 'GET',
+                mode: 'cors',
+                headers: new Headers({
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "access_token": access,
+                    "realm_id": id
+                }),
+            })
 
-        const url = "http://localhost:8080/inventory_list"
-        fetch(url, {
-            method: 'GET',
-            mode: 'cors',
-            headers: new Headers({
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                "Access-Control-Allow-Origin": "*",
-                "access_token": access,
-                "realm_id": id
-            }),
-        })
-
-        .then(response => response.json())
-        .then((responseText) => {
-            console.log(JSON.stringify(responseText));
-            /*this.setState({
-                data: responseText//JSON.stringify(responseText)
-            })*/
-            setData(responseText);
-        })
+            .then(response => response.json())
+            .then((responseText) => {
+                console.log(JSON.stringify(responseText));
+                /*this.setState({
+                    data: responseText//JSON.stringify(responseText)
+                })*/
+                setData(responseText);
+            })
+        }
     }, [])
 
     return (
@@ -82,7 +87,7 @@ function InventoryList () {
             <div className="mainTable">
                 <Table inventory={data} />
             </div>
-            <p></p>
+            <pre></pre>
         </body>
     );
 
