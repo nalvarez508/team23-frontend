@@ -27,7 +27,7 @@ class SubItem extends Component{
 
                 <div class = "top">
                         <div class = "logo">
-                            <h1>Add Sub Item</h1>
+                            <h1>Add Item</h1>
                         </div>
                 </div>
 
