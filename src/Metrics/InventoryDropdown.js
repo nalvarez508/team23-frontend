@@ -22,20 +22,12 @@ class InventoryDropdown extends Component {
   
     handleSubmit(event) {
         if (this.state.value === "Sugar") {
-            dataTest = [
-                { x: 1, y: 200 },
-                { x: 2, y: 35 },
-                { x: 3, y: 450 },
-                { x: 4, y: 375 }
-            ]; 
+            dataTest[0].y = 200;
+            dataTest[1].y = 35;
+            dataTest[2].y = 450;
+            dataTest[3].y = 375;
         }
         if (this.state.value === "Milk") {
-            /*dataTest = [
-                { x: 1, y: 35 },
-                { x: 2, y: 450 },
-                { x: 3, y: 375 },
-                { x: 4, y: 200 }
-            ];*/
             dataTest[0].y = 35;
             dataTest[1].y = 450; 
             dataTest[2].y = 375; 
@@ -62,5 +54,5 @@ class InventoryDropdown extends Component {
     }
 }
 
-export default InventoryDropdown;
 export {dataTest};
+export default InventoryDropdown;

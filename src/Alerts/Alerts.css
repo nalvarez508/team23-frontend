@@ -24,7 +24,7 @@ li a:hover {
   text-decoration: none;
 }
 
-.mainContent {
+.mainAlerts {
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;

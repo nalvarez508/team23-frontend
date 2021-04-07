@@ -3,7 +3,6 @@ import {CanvasJSChart} from 'canvasjs-react-charts'
 import {dataTest} from './InventoryDropdown';
 
 class InventoryLevel extends Component {
- 
 	render() {		
         const options = {
             animationEnabled: true,

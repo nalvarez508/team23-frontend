@@ -41,9 +41,12 @@ class Metrics extends Component{
                         <InventoryDropdown/>
                         <InventoryLevel/>
                     </div>
-                    <GetHeaders/>
-                    <p>{access}</p>
-                    <p>{id}</p>
+                    <div class = "mainContent">
+                        <GetHeaders/>
+                        <p>{access}</p>
+                        <p>{id}</p>
+                    </div>
+                   
                 </div>
 
             </body>
