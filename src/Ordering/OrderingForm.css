@@ -18,5 +18,9 @@ li.test {
 }
 
 Form.ff {
-    margin-left: -20px;
+    margin-left: 0px;
+}
+
+.a{
+    font-size: 12pt;
 }
