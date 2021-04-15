@@ -23,6 +23,7 @@ export const OrderingForm = () => {
 
 
 
+
     return(
         <div className="ord">
             <Form class = "ff">
@@ -44,13 +45,14 @@ export const OrderingForm = () => {
                     type = "submit"
                     onClick = {async() =>{
                         var item = order;
-                        
+                        console.log(item)
                         const response = await fetch('http://127.0.0.1:5000/subItem/' + item,{
                             method: 'GET',
                             headers: {
                                 "Content-Type": "application/json"
                             },
                         })
+                        .then(setItem([]))
                         .then(res => res.json())
                         .then((json) => {
                             setItem(json)
