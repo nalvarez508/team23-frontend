@@ -76,3 +76,7 @@ li a:hover {
   border-right: white;
   border-style: none solid none none;
 }
+
+.main{
+  margin-left: 150px
+}

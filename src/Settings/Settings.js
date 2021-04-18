@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Settings.css';
+import SettingsForm from './SettingsForm.js';
 
 class Settings extends Component{
     render(){
@@ -23,6 +24,9 @@ class Settings extends Component{
                         <div class = "logo">
                             <h1>Settings</h1>
                         </div>
+                </div>
+                <div className="main">
+                    <SettingsForm/>
                 </div>
 
             </body>
