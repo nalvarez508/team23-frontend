@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Alerts.css';
+import AlertOut from "./AlertOut";
 
 class Alerts extends Component{
     render(){
@@ -26,6 +27,7 @@ class Alerts extends Component{
 
                 <div class = "mainAlerts">
                     <p>You have 0 new alerts regarding your inventory!</p>
+                    <AlertOut/>
                 </div>
 
             </body>
