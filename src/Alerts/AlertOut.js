@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {makeStyles} from '@material-ui/core';
 import {Form, Input, Header} from 'semantic-ui-react';
 import Table from './Table.js';
+import './AlertOut.css';
 
 const useStyles = makeStyles((theme) => ({
     root:{

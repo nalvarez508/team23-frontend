@@ -1,6 +1,22 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import {makeStyles} from '@material-ui/core';
+import {Link} from 'react-router-dom';
+
+const useStyles = makeStyles((theme) => ({
+    root:{
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+        },
+        button: {
+            margin: theme.spacing(1)
+        }
+    }
+}))
 
 const Table = ({inventory}) => {
+    const classes = useStyles();
+
     return (
         <table className="table">
             <thead>
@@ -8,7 +24,6 @@ const Table = ({inventory}) => {
                 <th>Name</th>
                 <th>SKU</th>
                 <th>Quantity</th>
-                <th>Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,7 +33,14 @@ const Table = ({inventory}) => {
                             <td>{inventory.name}</td>
                             <td>{inventory.sku}</td>
                             <td>{inventory.qty}</td>
-                            <td>${inventory.price}</td>
+                            <Button
+                            component ={Link} to="/Ordering"
+                            className={classes.button}
+                            variant ="contained"
+                            color = "primary" 
+                            >
+                                Acknowledge
+                            </Button>
                         </tr>
                     )
                 }) : <tr><td colSpan="4">Loading...</td></tr> }

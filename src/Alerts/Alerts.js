@@ -26,7 +26,7 @@ class Alerts extends Component{
                 </div>
 
                 <div class = "mainAlerts">
-                    <p>You have 0 new alerts regarding your inventory!</p>
+                    <p>Items that are low!</p>
                     <AlertOut/>
                 </div>
 
