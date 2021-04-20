@@ -24,29 +24,6 @@ function SettingsForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //console.log("InputFields", inputFields);
-        fetch("http://localhost:8080/getHeaders", {
-            method: 'GET',
-            mode: 'cors',
-            headers: new Headers({
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-                "Access-Control-Allow-Origin": "*"
-            }),
-        })
-        .then(res => res.json())
-        .then((resText) => {
-            setHeader(JSON.stringify(resText));
-        })
-        .catch(error => {
-            console.log("Oops!")
-        });
-        var token = header;
-        token = token.replace("access_token", '').replace("refresh_token", '').replace("realm_id", '');
-        token = token.replace(/[""]/g, '').replace(":", '').replace(":", '').replace(":", '').replace(/[{}]/g, '');
-        var splitToken = token.split(",");
-        var access = splitToken[0];
-        var id = splitToken[2];
 
         var sentence = JSON.stringify(inputFields);
         var total = sentence.replace("threshold", '').replace(":", '');
@@ -54,27 +31,23 @@ function SettingsForm(){
         total = total.replace(' " ', '');
         total = total.replace(/[""]/g, '').replace(/[{}]/g, '').replace("[", '').replace("]", '');
         var pieces = total.split(",");
-
-        if(access){
-            alert('Threshold Set!');
-        }
-
-        const url = "http://localhost:8080/createMainItem?name=" + pieces[0] + "&sku=" + pieces[1] + "&price=" + pieces[2] + "&qty=" + pieces[3];
+        const url = "http://localhost:8080/changeThreshold?threshold=" + pieces[0];
+        console.log(pieces[0]);
         fetch(url, {
             method: 'GET',
             mode: 'cors',
             headers: new Headers({
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "access_token": access,
-            "realm_id": id        
+            "Access-Control-Allow-Origin": "*",      
             }),
             })
             .then(response => response.json())
             .catch(error => {
                 console.log("Oops!")
-            });    
+            });
+            alert('Threshold Set!');
+
     }
     const handleChangeInput = (index, event) => {
         event.preventDefault();
