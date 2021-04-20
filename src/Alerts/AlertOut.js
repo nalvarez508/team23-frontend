@@ -42,7 +42,8 @@ function AlertOut() {
         var access = splitToken[0];
         var id = splitToken[2];
 
-        fetch("http://localhost:8080/inventory_list", {
+
+        fetch("http://localhost:8080/alertCheck", {
             method: 'GET',
             mode: 'cors',
             headers: new Headers({
