@@ -7,7 +7,7 @@ function InventoryList () {
     const [header, setHeader] = useState("");
     const [data, setData] = useState({});
 
-    useEffect(() => {
+    //useEffect(() => {
     //useLayoutEffect(() => {
         fetch("http://localhost:8080/getHeaders", {
             method: 'GET',
@@ -55,7 +55,7 @@ function InventoryList () {
             })*/
             setData(responseText);
         })
-    }, [])
+   // }, [])
 
     return (
         <body>
