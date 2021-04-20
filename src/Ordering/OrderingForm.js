@@ -79,7 +79,7 @@ export const OrderingForm = () => {
                             <br></br>
                             <small>Price: {item.price}</small>
                             <br></br>
-                            <small>Total: {item.Total} Oz.</small>
+                            <small>Total: {item.Total}</small>
                             <br></br>
                             <a href={item.url} target="_blank">Order</a>
                             
