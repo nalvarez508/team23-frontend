@@ -1,7 +1,7 @@
 import React, {useEffect, useLayoutEffect, useState } from 'react';
 import './updateItem.css';
 
-function updateItem () {
+function UpdateItem () {
 
     
 
@@ -35,4 +35,4 @@ function updateItem () {
 
 }
 
-export default updateItem;
+export default UpdateItem;

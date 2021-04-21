@@ -17,7 +17,7 @@ class AddItem extends Component{
                     <li><a href="/InventoryList">Inventory</a></li>
                     <li><a href= "/Alerts">Alerts</a></li>
                     <li><a class="active" href="/AddItem">Add Item</a></li>
-                    <li><a href= "/SubItem">Add SubItem</a></li>
+                    <li><a href= "/UpdateItem">Update Inventory</a></li>
                     <li><a href= "/Ordering">Ordering</a></li>
                     <li><a href= "/Metrics">Metrics</a></li>
                     <li><a href="/Settings">Settings</a></li>

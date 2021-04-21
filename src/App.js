@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import InventoryList from './InventoryList/inventoryList';
 import Home from './Home/Home';
 import AddItem from './SubItem/subItem';
+import UpdateItem from './UpdateItem/updateItem';
 import Alerts from './Alerts/Alerts';
 import Ordering from './Ordering/Ordering';
 import Metrics from './Metrics/Metrics';
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path="/Home" component={Home}/>
             <Route path="/InventoryList" component={InventoryList}/>
             <Route path="/AddItem" component={AddItem}/>
+            <Route path="/UpdateItem" component={UpdateItem}/>
             <Route path="/Alerts" component={Alerts}/>
             <Route path="/Ordering" component={Ordering}/>
             <Route path="/Metrics" component={Metrics}/>
