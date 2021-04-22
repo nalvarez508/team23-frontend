@@ -79,7 +79,7 @@ li a:hover {
 
 .ordering {
   display: inline-block;
-  /* margin-left: 160px; */
+   margin-left: 160px;
   height: fit-content;
   width: fit-content;
 
