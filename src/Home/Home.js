@@ -49,7 +49,7 @@ class Home extends Component{
                 <li><a href="/InventoryList">Inventory</a></li>
                 <li><a href= "/Alerts">Alerts</a></li>
                 <li><a href="/AddItem">Add Item</a></li>
-                <li><a href="/UpdateItem">Update Inventory</a></li>
+                <li><a href="/UpdateItem">Add Item</a></li>
                 <li><a href= "/Ordering">Ordering</a></li>
                 <li><a href= "/Metrics">Metrics</a></li>
                 <li><a href="/Settings">Settings</a></li>
@@ -63,16 +63,9 @@ class Home extends Component{
             </div>
 
             <div class = "mainContent">
+                
                 <h1 class ="dash">
-                    <pre>
-                        {JSON.stringify(this.state.data, null, 2)}
-                    </pre>
-                    Hello, User!
-                    <pre>
-                        <p>Access Token: {this.state.data.access_token}</p>
-                        <p>Realm ID: {this.state.data.realm_id}</p>
-                        <p>Refresh Token: {this.state.data.refresh_token}</p>
-                    </pre>
+                    Welcome Back!
                 </h1>
             </div>
         </body>
