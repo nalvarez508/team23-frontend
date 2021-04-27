@@ -21,7 +21,7 @@ class Expenses extends Component {
 			exportEnabled: true,
 			theme: "light2", // "light1", "dark1", "dark2"
 			title:{
-				text: "Expenses this Month "
+				text: "Profit this Year "
 			},
 			axisY: {
 				title: "Price in USD",
@@ -29,12 +29,12 @@ class Expenses extends Component {
 			},
 			axisX: {
 				title: "Month of Year",
-				prefix: "W",
+				prefix: "M",
 				interval: 1
 			},
 			data: [{
 				type: "line",
-				toolTipContent: "Week {x}: ${y}",
+				toolTipContent: "Month {x}: ${y}",
 				dataPoints: dataPoints
 			}]
 		}
