@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
-import {dataTest} from './InventoryDropdown';
+import {value} from './InventoryDropdown'
 
 class InventoryLevel extends Component {
 	render() {		
@@ -22,7 +22,12 @@ class InventoryLevel extends Component {
             data: [{
                 type: "line",
                 toolTipContent: "Week {x}: {y} units",
-                dataPoints: dataTest
+                dataPoints: [
+                    { x: 1, y: 16300.24 },
+					{ x: 2, y: 16509.70 },
+					{ x: 3, y: 18431.56 },
+					{ x: 4, y: 17198.35 }
+                ]
             }]
         }
 
