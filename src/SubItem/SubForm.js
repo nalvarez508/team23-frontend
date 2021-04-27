@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/core';
-import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -22,9 +21,6 @@ function SubForm(){
         {name: '', sku: '', price: '', currentQuantity: ''},
     ]);
     const [header, setHeader] = useState("");
-
-
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -56,11 +52,6 @@ function SubForm(){
 
         console.log(access);
         console.log(id);
-
-
-
-
-        
         var sentence = JSON.stringify(inputFields);
         //console.log(sentence);
 
