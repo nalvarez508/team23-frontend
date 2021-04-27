@@ -2,7 +2,18 @@ import React, {Component} from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
 import {value} from './InventoryDropdown'
 
+
+var dataPoints = [];
 class InventoryLevel extends Component {
+    constructor(props){
+		super(props);
+		this.state = {
+			data: [],
+			x: [],
+			y: []
+		}
+	}
+
 	render() {		
         const options = {
             animationEnabled: true,
@@ -15,31 +26,78 @@ class InventoryLevel extends Component {
                 title: "Quantity",
             },
             axisX: {
-                title: "Week of Month",
-                prefix: "W",
+                title: "Month of Year",
+                prefix: "M",
                 interval: 1
             },
             data: [{
                 type: "line",
-                toolTipContent: "Week {x}: {y} units",
-                dataPoints: [
-                    { x: 1, y: 16300.24 },
-					{ x: 2, y: 16509.70 },
-					{ x: 3, y: 18431.56 },
-					{ x: 4, y: 17198.35 }
-                ]
+                toolTipContent: "Month {x}: {y} units",
+                dataPoints: dataPoints
             }]
         }
 
 		return (
             <div>
                 <CanvasJSChart options = {options}
-                    /* onRef={ref => this.chart = ref} */
+                     onRef={ref => this.chart = ref} 
                 />
                 {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
             </div>
 		);
 	}
+    componentDidMount(){
+		var chart = this.chart;
+		const url = "http://localhost:8080/getHeaders"
+		return fetch(url, {
+			method: 'GET',
+			mode: 'cors',
+			headers: new Headers({
+				"Content-Type": "application/json",
+				"Accept": "application/json",
+				"Access-Control-Allow-Origin": "*"
+			}),
+		})
+		.then(response => response.json())
+		.then((responseText) => {
+			console.log(JSON.stringify(responseText));
+			this.setState({
+				data: JSON.stringify(responseText)//JSON.stringify(responseText)
+			})
+			var it = this.state.data;
+			var token = it.replace("access_token", '').replace("refresh_token", '').replace("realm_id", '');
+			token = token.replace(/[""]/g, '').replace(":", '').replace(":", '').replace(":", '').replace(/[{}]/g, '');
+			var splitToken = token.split(",");
+			var access = splitToken[0];
+			var id = splitToken[2];
+			
+
+			fetch("http://localhost:8080/getItemAmounts?name=" + value, {
+            method: 'GET',
+            mode: 'cors',
+            headers: new Headers({
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "access_token": access,
+            "realm_id": id        
+            }),
+            })
+            .then(response => response.json())
+            .then((json) => {
+				for (var i=0; i<json.length; i++){
+					dataPoints.push({
+						x: json[i].month,
+						y: json[i].value
+					});
+				}
+				chart.render();
+            })
+		});
+		
+		
+	}
 }
+
  
 export default InventoryLevel;
