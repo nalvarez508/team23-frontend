@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {CanvasJSChart} from 'canvasjs-react-charts'
 import {value} from './InventoryDropdown'
+import Button from '@material-ui/core/Button';
 
 
 var dataPoints = [];
@@ -39,6 +40,7 @@ class InventoryLevel extends Component {
 
 		return (
             <div>
+                <Button>Button</Button>
                 <CanvasJSChart options = {options}
                      onRef={ref => this.chart = ref} 
                 />
@@ -71,8 +73,9 @@ class InventoryLevel extends Component {
 			var access = splitToken[0];
 			var id = splitToken[2];
 			
-
-			fetch("http://localhost:8080/getItemAmounts?name=" + value, {
+            var newValue = encodeURIComponent(value.trim());
+            console.log(newValue);
+			fetch("http://localhost:8080/getItemAmounts?name=Photo%20Cube", {
             method: 'GET',
             mode: 'cors',
             headers: new Headers({
