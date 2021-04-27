@@ -1,13 +1,31 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+
+var value = 111; 
 
 const UpdateDropdown = ({inventory}) => {
     
+    /* const handleChangeInput = (index, event) => {
+        event.preventDefault();
+        const values = [...inputFields];
+        values[index][event.target.name] = event.target.value;
+        setInputField(values);
+       
+    } */
+
+    //const [targetVal, setTarget] = useState(111);
+
+    function handleChange(event) {
+        //setTarget(event.target.value);
+        value = event.target.value;
+        console.log(event.target.value);
+    }
+
     return (
-        <select>
+        <select onChange={handleChange}>
             {(inventory.length > 0) ? inventory.map(item=> {
                 return (
-                    <option key={item.name}>
-                        {item.name}
+                    <option key={item.sku}>
+                        {item.sku}
                     </option>
                 )
             }) : <select><option>Loading...</option></select> }
@@ -15,4 +33,5 @@ const UpdateDropdown = ({inventory}) => {
     );
 }
 
+export {value};
 export default UpdateDropdown;
