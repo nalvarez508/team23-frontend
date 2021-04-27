@@ -67,7 +67,7 @@ function UpdateForm(){
             alert('Item Updated!');
         }
 
-        const url = "http://localhost:8080/updateItem?&sku=" + value + "&price=" + pieces[0] + "&qty=" + pieces[1];
+        const url = "http://localhost:8080/updateItem?sku=" + value + "&price=" + pieces[0] + "&qty=" + pieces[1];
         console.log(url)
         //console.log(JSON.stringify(inputFields));
         //console.log('http://localhost:8080/addSubItem?name=${encodeURIComponent(pieces[0])}&sku={encodedURIComponent(pieces[1]))&qty={encodeURIComponent(pieces[2])}&muq={encodedURIComponent(pieces[3])}')

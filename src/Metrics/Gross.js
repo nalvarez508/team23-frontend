@@ -9,7 +9,7 @@ class Gross extends Component {
 			exportEnabled: true,
 			theme: "light2", // "light1", "dark1", "dark2"
 			title:{
-				text: "Gross this Month "
+				text: "Expenses this Month "
 			},
 			axisY: {
 				title: "Price in USD",

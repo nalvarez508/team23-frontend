@@ -88,7 +88,7 @@ class Expenses extends Component {
             .then((json) => {
 				for (var i=0; i<json.length; i++){
 					dataPoints.push({
-						x: json[i].month,
+						x: json[i].month+1,
 						y: json[i].value
 					});
 				}
