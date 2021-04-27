@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 function UpdateForm(){
     const classes = useStyles();
     const [inputFields, setInputField] = useState([
-        {name: '', price: '', currentQuantity: ''},
+        {price: '', currentQuantity: ''},
     ]);
     const [header, setHeader] = useState("");
 
@@ -56,7 +56,7 @@ function UpdateForm(){
         var sentence = JSON.stringify(inputFields);
         //console.log(sentence);
 
-        var total = sentence.replace("name", '').replace("price", '').replace("currentQuantity", '').replace(":", '');
+        var total = sentence.replace("price", '').replace("currentQuantity", '').replace(":", '');
         total = total.replace(":", '').replace(":", '').replace(":", '');
         total = total.replace(' " ', '');
         total = total.replace(/[""]/g, '').replace(/[{}]/g, '').replace("[", '').replace("]", '');
@@ -67,7 +67,7 @@ function UpdateForm(){
             alert('Item Updated!');
         }
 
-        const url = "http://localhost:8080/updateItem?name=" + pieces[0] + "&sku=" + value + "&price=" + pieces[1] + "&qty=" + pieces[2];
+        const url = "http://localhost:8080/updateItem?&sku=" + value + "&price=" + pieces[0] + "&qty=" + pieces[1];
         console.log(url)
         //console.log(JSON.stringify(inputFields));
         //console.log('http://localhost:8080/addSubItem?name=${encodeURIComponent(pieces[0])}&sku={encodedURIComponent(pieces[1]))&qty={encodeURIComponent(pieces[2])}&muq={encodedURIComponent(pieces[3])}')
@@ -105,13 +105,6 @@ function UpdateForm(){
             <form className = {classes.root} onSubmit = {handleSubmit}>
                 {inputFields.map((inputField, index) => (
                         <div key = {index}>
-                            <TextField
-                            name = "name"
-                            label="Name"
-                            variant = "filled"
-                            value = {inputField.name}   
-                            onChange={event => handleChangeInput(index, event)}
-                            />
                             <TextField
                             name = "price"
                             label = "Price"
