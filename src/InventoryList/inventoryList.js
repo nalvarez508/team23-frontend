@@ -9,6 +9,7 @@ function InventoryList () {
 
     //useEffect(() => {
     //useLayoutEffect(() => {
+    function test() {
         fetch("http://localhost:8080/getHeaders", {
             method: 'GET',
             mode: 'cors',
@@ -56,6 +57,7 @@ function InventoryList () {
             setData(responseText);
         })
    // }, [])
+    }
 
     return (
         <body>
@@ -80,6 +82,7 @@ function InventoryList () {
             </div>
 
             <div className="mainTable">
+                <button onClick = {test}>Refresh</button>
                 <Table inventory={data} />
             </div>
         </body>
